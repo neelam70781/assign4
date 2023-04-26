@@ -1,0 +1,269 @@
+<html>
+    <head>
+        <title>Survey form</title>
+        <style>
+            .container {
+                position: absolute;
+                margin: auto;
+                display:grid; 
+                width: 30%;
+                height: 50%;
+                left: 0; right: 0;
+                top: 0; bottom: 0;
+            }
+            .left {
+                display: grid;
+                grid-template-columns: 35% 65%;
+            }
+            .left label {
+                font-weight: bold;
+            }
+            .left input {
+                background-color: rgba(255, 255, 255, 0.5);
+                border-radius: 10px;
+                border: 2px solid rgba(255, 255, 255, 0.5);
+                height: 20px;
+            }
+            .left select {
+                background-color: rgba(255, 255, 255, 0.5);
+                border-radius: 10px;
+                border: 2px solid rgba(255, 255, 255, 0.5);
+                height: 20px;
+            }
+        
+        @media (max-width:1080px)
+        
+     {
+        
+        .container{
+            height: 100vh;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            
+        }
+        
+        .center{
+            width:65vw;
+            height: 80vh;
+            border-radius:10px;
+            box-shadow:5px 5px 25px black;
+            display:flex;
+            
+        }
+        
+        .left{
+            flex-basis:50%;
+            /* border-radius:10px; */
+        }
+        
+        
+        h1{
+            font-family: 'Roboto', sans-serif;
+            padding:20px 120px;
+            margin:0 10px;
+            font-size: 40px;
+        }
+        form{
+            padding: 0 20px;
+            font-family: 'Roboto', sans-serif;
+            font-size:15px;
+        }
+        
+        input{
+            width:150px;
+            padding:2px 10px 2px 10px;
+            margin:5px 2px; 
+            border-top:none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 2px ;   
+        }
+        
+        input:focus{
+            outline:none
+        }
+        
+        .first{
+            display:flex;
+            flex-direction: row;
+            gap:10px;
+            margin:10px;
+            height:30px;
+        }
+        
+        .left label {
+            flex-basis: 35%;
+            display:flex;
+            align-items: center;
+        }
+        
+        input[type="radio"]{
+            width:15px;
+            margin:0 10px;
+    
+        }
+        
+        
+        
+        .rating .first{
+            margin:20px 0;
+        }
+        button{
+            margin:5px 200px;
+        
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+            color:white;
+            padding:8px 30px;
+            border:none;
+            font-size: 15px;
+        
+        }
+        
+        button:hover{
+            box-shadow: 5px 2px 10px black;
+        }
+        
+        @media(max-width:600px){
+            .center{
+                width:280px;
+            }
+        
+            
+        
+            h1{
+                padding: 15px 30px;
+                font-size: 30px;
+            }
+        
+            form{
+                padding: 2px 4px;
+            }
+        
+            label{
+                flex-basis:18%;
+            }
+        
+            input{
+                width:131px;
+            }
+        
+            .first{
+                margin: 5px;
+            }
+        
+            .radio_label{
+                flex-basis:15%;
+            }
+        
+            input[type="radio"]{
+                width:13px;
+                margin:0 -8px;
+            
+            }
+        
+            button{
+                position: relative;
+                right: 23%;
+            }
+        }
+        
+        @media(min-width:600px) and (max-width:1080px){
+            .center{
+                width:600px;
+            }
+           h1{
+                padding: 11px 100px;
+                margin: 0 0px;
+            }
+        
+            .first{
+                margin: 5px;
+                height: 30px;
+            }
+        
+            button{
+                position: relative;
+                right: 8%;
+            }
+        
+            button{
+                margin:0px 200px;
+            }
+        }
+        
+        @media(min-width:1080px) and (max-width:1440px){
+            .center{
+                width:600px;
+            }
+        
+            h1{
+                padding: 20px 90px;
+            }
+        
+            form{
+                padding: 0px 3px;
+            }
+        
+            .first{
+                margin:5px;
+            }
+        
+            
+        }
+      </style>
+</head>
+    <body style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background-color: rgb(178, 157, 140);">
+        <h1 style="font-size: 50px; text-align: center;">SURVEY FORM</h1>
+        <div class="container">
+            <div class="left">
+                <label>Name: </label>
+                <div>
+                    <input style="margin-right: 3%; width: 45%;" type="text" placeholder="First name">
+                    <input style="width: 45%;" type="text" placeholder="Last name">
+                </div>
+            </div>
+            <div class="left" style="margin-bottom: 2%;">
+                <label>Address: </label>
+                <div style="display: grid;">
+                    <input type="text" placeholder="Street">
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="State">
+                    <input type="text" placeholder="Pincode">
+                </div>
+            </div>
+            <div class="left">
+                <label>Mobile Number: </label>
+                <input type="text" placeholder="Mobile number">
+            </div>
+            <h2 style="margin: 1% 0 1% 0;" >Rating</h3>
+            <div class="left">
+                <label>Quality of product: </label>
+                <select name="quality" id="quality">
+                    <option value="1">Excellent</option>
+                    <option value="2">Good</option>
+                    <option value="3">Bad</option>
+                </select>
+            </div>
+            <div class="left">
+                <label>Value of Money: </label>
+                <select name="money" id="quality">
+                    <option value="1">Excellent</option>
+                    <option value="2">Good</option>
+                    <option value="3">Bad</option>
+                </select>
+            </div>
+            <div class="left">
+                <label>Delivery: </label>
+                <select name="delivery" id="quality">
+                    <option value="1">Excellent</option>
+                    <option value="2">Good</option>
+                    <option value="3">Bad</option>
+                </select>
+            </div>
+            <button style="width: 20%;">SUBMIT</button>   
+        </div>
+       
+    </body>
+</html>
